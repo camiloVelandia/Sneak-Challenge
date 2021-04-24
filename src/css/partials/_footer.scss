@@ -1,0 +1,29 @@
+.footer {
+    height: 75px;
+    font-family: Questrial;
+    font-size: 13px;
+    letter-spacing: 2.6px;
+    color: #c3d0d8;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-self: center;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+.footer p{
+    margin: 0;
+}
+
+.footer__text--brand {
+    color: #ff5773;
+    text-decoration: none;
+}
+.footer__social--icons{
+  display: flex;
+  justify-content: center;
+  & a{
+      margin: 0 5px;
+  }
+}

@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+
+
+.header {
+    height: 100px;
+    margin: 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    @include breakpoint(md){
+        padding: 0 70px;
+    }
+    @include breakpoint(xl){
+        padding: 0 160px;
+    }
+}
+
+.header__logo {
+    height: 35px;
+    width: 186px;
+    margin: 0;
+    display: flex;
+    justify-content: left;
+    background-color: #ffffff;
+    & img{
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+.navbar {
+    margin: 0;
+    padding: 0;
+    display: none;
+    top: 100px;
+    right: 0;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    @include breakpoint(lg){
+        background-color: transparent;
+        width: auto;
+        display: flex;
+        position: static;
+    }
+    @include breakpoint(xl){
+        width: 670px;
+    }
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    @include breakpoint(lg){
+        flex-direction: row;
+        width: 100%;
+        margin: 0;
+        list-style: none;
+        align-items: center;
+
+    }
+}
+
+.navbar ul li{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Questrial;
+    font-size: 14px;
+    letter-spacing: 2.8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.navbar--header ul li{
+    &:last-child a:hover{
+            background-color: transparent;
+            transform: scale(1.1);
+        }
+}
+
+.navbar a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #7a7a7a;
+    padding: 13px 31px 15px 29px;
+    &:hover{
+        background-color: #ff5672;
+        color: #ffffff;
+    }
+}
+
+
+.header__navbar--search {
+    height: 22px;
+    padding: 0;
+    display: flex;
+}
+
+
+.toggle__menu {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: block;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40px;
+    height: 40px;
+    @include breakpoint(lg){
+        display: none;
+    }
+}
+
+.toggle__menu--main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-family: Questrial;
+    color: #ff5672;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    margin-bottom: 40px;
+    @include breakpoint(lg){
+        display: none;
+    }
+    & img{
+        width: 30px;
+    }
+}
+
+.toggle__menu .toggle__menu--main img{
+    height: 20px;
+    width: 20px;
+    fill: #707070;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
